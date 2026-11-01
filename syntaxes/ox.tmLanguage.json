@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Ox",
+  "scopeName": "source.ox",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#keywords" },
+    { "include": "#types" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.double-slash.ox", "match": "//.*$" }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.ox",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            { "name": "constant.character.escape.ox", "match": "\\\\[nrt\"\\\\]" }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        { "name": "constant.numeric.integer.ox", "match": "\\b[0-9]+\\b" }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.ox",
+          "match": "\\b(fx|val|mut|ret|if|else|loop|stop|skip|api|use|true|false|GET|POST|PUT|PATCH|DELETE)\\b"
+        },
+        {
+          "name": "invalid.deprecated.ox",
+          "match": "\\b(fn|fun|flow|let|var|bind|set|while|break|next|when|otherwise|send|cloud|on|takes|gives|return|service)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        { "name": "support.type.ox", "match": "\\b(Int|Bool|String|Unit|Json)\\b" }
+      ]
+    }
+  }
+}
+

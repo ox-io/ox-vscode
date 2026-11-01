@@ -1,0 +1,29 @@
+{
+  "name": "ox-language",
+  "displayName": "Ox Language",
+  "description": "Official language support for Ox",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ox",
+        "aliases": ["Ox", "ox"],
+        "extensions": [".ox"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ox",
+        "scopeName": "source.ox",
+        "path": "./syntaxes/ox.tmLanguage.json"
+      }
+    ]
+  }
+}
+
