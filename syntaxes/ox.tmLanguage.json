@@ -36,11 +36,15 @@
       "patterns": [
         {
           "name": "keyword.control.ox",
-          "match": "\\b(fx|val|mut|ret|if|else|loop|stop|skip|api|use|true|false|GET|POST|PUT|PATCH|DELETE)\\b"
+          "match": "\\b(fx|val|mut|ret|if|else|loop|stop|skip|api|use|shape|true|false|GET|POST|PUT|PATCH|DELETE)\\b"
         },
         {
           "name": "invalid.deprecated.ox",
           "match": "\\b(fn|fun|flow|let|var|bind|set|while|break|next|when|otherwise|send|cloud|on|takes|gives|return|service)\\b"
+        }
+        ,{
+          "name": "invalid.illegal.reserved.ox",
+          "match": "\\b(choice|pick|case|other|none|try|catch|fail|defer|task|wait|spawn|race|chan|recv|as|pub|trait|impl|self|test)\\b"
         }
       ]
     },
