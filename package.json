@@ -2,18 +2,29 @@
   "name": "ox-language",
   "displayName": "Ox Language",
   "description": "Official language support for Ox",
-  "version": "0.0.1",
+  "version": "0.2.0-alpha.3",
   "private": true,
   "engines": {
     "vscode": "^1.90.0"
   },
-  "categories": ["Programming Languages"],
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:ox"
+  ],
+  "main": "./extension.js",
   "contributes": {
     "languages": [
       {
         "id": "ox",
-        "aliases": ["Ox", "ox"],
-        "extensions": [".ox"],
+        "aliases": [
+          "Ox",
+          "ox"
+        ],
+        "extensions": [
+          ".ox"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -23,7 +34,25 @@
         "scopeName": "source.ox",
         "path": "./syntaxes/ox.tmLanguage.json"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Ox",
+      "properties": {
+        "ox.server.path": {
+          "type": "string",
+          "default": "ox",
+          "description": "Path to the Ox CLI executable used to start ox lsp."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "check": "node --check extension.js"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^11.0.0"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1"
   }
 }
-

@@ -36,7 +36,7 @@
       "patterns": [
         {
           "name": "keyword.control.ox",
-          "match": "\\b(fx|val|mut|ret|if|else|loop|stop|skip|api|use|shape|choice|pick|case|other|true|false|GET|POST|PUT|PATCH|DELETE)\\b"
+          "match": "\\b(fx|val|mut|ret|if|else|loop|stop|skip|api|use|shape|choice|pick|case|other|try|catch|fail|true|false|GET|POST|PUT|PATCH|DELETE)\\b"
         },
         {
           "name": "invalid.deprecated.ox",
@@ -44,7 +44,7 @@
         }
         ,{
           "name": "invalid.illegal.reserved.ox",
-          "match": "\\b(none|try|catch|fail|defer|task|wait|spawn|race|chan|recv|as|pub|trait|impl|self|test)\\b"
+          "match": "\\b(none|defer|task|wait|spawn|race|chan|recv|as|pub|trait|impl|self|test)\\b"
         }
       ]
     },

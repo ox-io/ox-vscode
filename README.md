@@ -4,7 +4,9 @@ Official Visual Studio Code extension with Ox language-server, formatter, testin
 
 ## Status
 
-Repository scaffold created. Architecture and public APIs must be approved through `ox-rfcs` before stabilization.
+Alpha integration: syntax highlighting plus the `ox lsp` server for diagnostics,
+formatting, completion, hover, and go-to-definition. Install the Ox CLI on `PATH`
+before launching VS Code.
 
 ## Scope
 
