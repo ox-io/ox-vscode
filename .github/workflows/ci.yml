@@ -14,4 +14,5 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run check
+      - run: npm run package
       - run: node -e 'JSON.parse(require("node:fs").readFileSync("syntaxes/ox.tmLanguage.json", "utf8"))'
