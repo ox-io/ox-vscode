@@ -16,3 +16,27 @@ jobs:
       - run: npm run check
       - run: npm run package
       - run: node -e 'JSON.parse(require("node:fs").readFileSync("syntaxes/ox.tmLanguage.json", "utf8"))'
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run package
+      - uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: '*.vsix'
+      - name: Publish VSIX release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${GITHUB_REF_NAME}" ./*.vsix --verify-tag --generate-notes

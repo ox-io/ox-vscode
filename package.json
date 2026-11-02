@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "files": ["extension.js", "language-configuration.json", "syntaxes", "README.md", "LICENSE"],
   "description": "Official language support for Ox",
-  "version": "0.2.0-alpha.6",
+  "version": "0.2.0-alpha.7",
   "private": true,
   "engines": {
     "vscode": "^1.90.0"
