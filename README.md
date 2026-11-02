@@ -5,8 +5,9 @@ Official Visual Studio Code extension with Ox language-server, formatter, testin
 ## Status
 
 Alpha integration: syntax highlighting plus the `ox lsp` server for diagnostics,
-formatting, completion, hover, and go-to-definition. Install the Ox CLI on `PATH`
-before launching VS Code.
+formatting, completion, hover, and go-to-definition. Alpha.8 resolves locked
+package modules for diagnostics, package-name completion, and definitions inside
+cached package sources. Install the Ox CLI on `PATH` before launching VS Code.
 
 ## Scope
 
