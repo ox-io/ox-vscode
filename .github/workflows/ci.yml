@@ -37,7 +37,7 @@ jobs:
         with:
           name: ox-language-${{ github.ref_name }}
           path: '*.vsix'
-      - uses: actions/attest-build-provenance@v2
+      - uses: actions/attest-build-provenance@v4
         with:
           subject-path: '*.vsix'
       - name: Publish VSIX release
