@@ -61,6 +61,6 @@
     "minimatch": "^11.0.1"
   },
   "devDependencies": {
-    "@vscode/vsce": "^4.1.0"
+    "@vscode/vsce": "^4.1.1"
   }
 }
